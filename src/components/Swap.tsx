@@ -36,7 +36,7 @@ export const Swap: React.FC = () => {
               setProvider(provider);
               setContract(contractInstance);
             })
-            .catch(error => {
+            .catch((error:Error) => {
               // User denied account access, or other error occurred
               console.error("Error accessing MetaMask accounts:", error);
               // Handle the error or notify the user
@@ -138,5 +138,5 @@ export const Swap: React.FC = () => {
           </div>
           <button onClick={handleSwap}>Swap!</button>
         </div>
-      );
-      };
+    );
+};
